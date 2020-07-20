@@ -4,21 +4,66 @@ body {
   background-color: $text-color;
 }
 
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
 .container {
   max-width: 1440px;
   min-width: 360px;
   height: 100vh;
   margin: auto;
   display: flex;
+  color: $text-color;
 }
 
 .header {
   position: fixed;
-  padding: 15.5vh 3vh 5vh 3vh;
   width: 30%;
   max-width: 410px;
   height: 100vh;
+  padding: 15.5vh 3vh 5vh 3vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text-color;
+  text-align: right;
   background-color: $primary-color;
+
+  article {
+    h1 {
+      margin-bottom: 1.5vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 700;
+      font-size: 3em;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2em;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+  }
+}
+
+.list-projects {
+  font-family: 'Comfortaa', cursive;
+  h3 {
+    font-size: 2.1em;
+    line-height: 2.1em;
+    font-weight: 700;
+  }
+  li {
+    //margin-bottom: 1.5vh;
+    font-size: 1.5em;
+    line-height: 1.8em;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
 }
 
 main {
@@ -37,5 +82,14 @@ main {
     width: 100%;
     max-width: none;
     height: auto;
+    padding: 5vh 2vh 2vh 2vh;
+    text-align: center;
+    article {
+      margin-bottom: 3vh;
+    }
+  }
+
+  .list-projects {
+    display: none;
   }
 }

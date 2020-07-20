@@ -1,0 +1,44 @@
+body {
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 360px;
+  height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  position: fixed;
+  padding: 15.5vh 3vh 5vh 3vh;
+  width: 30%;
+  max-width: 410px;
+  height: 100vh;
+  background-color: #8338EC;
+}
+
+main {
+  width: 100%;
+  padding: 3vh 0;
+  background-color: green;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header {
+    position: static;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

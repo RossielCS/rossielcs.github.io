@@ -134,7 +134,7 @@ main {
         margin-bottom: 3vh;        
         a {
           font-weight: 700;
-          color: $text-color;
+          color: $primary-color-dark;
           vertical-align: super;
         }
       }
@@ -151,6 +151,7 @@ main {
       p {
         font-size: clamp(1rem, 1.4vw, 1.5rem);
         line-height: 1.3em;
+        color: $primary-color-dark;
       }
     }
     .project-image {

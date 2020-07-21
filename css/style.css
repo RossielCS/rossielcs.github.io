@@ -163,7 +163,7 @@ main {
 
 .project .project-body .demo-code li a {
   font-weight: 700;
-  color: #FFFFFF;
+  color: #5D2AA5;
   vertical-align: super;
 }
 
@@ -181,6 +181,7 @@ main {
 .project .project-body .project-content p {
   font-size: clamp(1rem, 1.4vw, 1.5rem);
   line-height: 1.3em;
+  color: #5D2AA5;
 }
 
 .project .project-body .project-image {

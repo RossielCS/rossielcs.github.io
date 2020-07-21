@@ -63,6 +63,35 @@ a {
   }
 }
 
+.contact {
+  font-family: 'Comfortaa', cursive;
+  
+  h4 {
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: 700;
+  }
+
+  .email {
+    margin-bottom: 3vh;
+    h5 {
+      margin-bottom: 0.8vh;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .elsewhere {
+    h5 {
+      margin-bottom: 0.8vh;
+      font-weight: 700;
+    }
+  }
+  
+}
+
 .icons {
   display: flex;
   justify-content: flex-end;
@@ -77,7 +106,8 @@ main {
 }
 
 .project {
-  height: 95vh;
+  height: 100vh;
+  padding-bottom: 5vw;
   display: grid;
   grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
   h2 {
@@ -144,14 +174,6 @@ main {
   }
 }
 
-/*.demo {
-  list-style-image: url('/assets/images/icons8-cursor-in-window-30.png');
-}
-
-.code {
-  list-style-image: url('/assets/images/icons8-code-30.png');
-}*/
-
 .project-tools {
   grid-row: 5/6;
   margin: auto;
@@ -186,7 +208,8 @@ main {
   flex-basis: 33.3%;
 }
 
-.web-scraper-image {
+.web-scraper-image,
+.online-shop-image {
   height: 0;
   padding-top: 75%;
 }
@@ -197,19 +220,11 @@ main {
   flex-basis: 100%;
 }
 
-/*.online-shop-image {
-  height: 0;
-  padding-top: 75%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
-}
-
 .online-shop-img-container {
   margin-top: 2vw;
   max-width: 100%;
   flex-basis: 100%;
-}*/
+}
 
 #barhops00 {
   background-image: url('/assets/images/barhops_demo_00.png');
@@ -226,7 +241,7 @@ main {
 }
 
 #online-shop00 {
-  background-image: url('/assets/images/online-shop01.png');
+  background-image: url('/assets/images/online-shop00.png');
 }
 
 @media only screen and (max-width: 960px){
@@ -240,9 +255,10 @@ main {
     max-width: none;
     height: auto;
     padding: 5vh 2vh 2vh 2vh;
-    text-align: center;
+    
     article {
       margin-bottom: 3vh;
+      text-align: center;
       h1 {
         font-size: 3.8rem;
       }
@@ -279,7 +295,7 @@ main {
         }
       }
       .project-content {
-        height: 50%;
+        height: 70%;
         width: 70%;
         padding: 4%;
         p {
@@ -327,5 +343,9 @@ main {
       margin-bottom: 2.5vw;
       border-radius: 2vw;
     }
+  }
+
+  footer {
+    display: none;
   }
 }

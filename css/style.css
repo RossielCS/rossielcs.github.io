@@ -73,6 +73,34 @@ a {
   right: -1.5vh;
 }
 
+.contact {
+  font-family: 'Comfortaa', cursive;
+}
+
+.contact h4 {
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+.contact .email {
+  margin-bottom: 3vh;
+}
+
+.contact .email h5 {
+  margin-bottom: 0.8vh;
+  font-weight: 700;
+}
+
+.contact .email p {
+  font-size: 1rem;
+}
+
+.contact .elsewhere h5 {
+  margin-bottom: 0.8vh;
+  font-weight: 700;
+}
+
 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +120,8 @@ main {
 }
 
 .project {
-  height: 95vh;
+  height: 100vh;
+  padding-bottom: 5vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr 3fr 1fr 1fr;
@@ -176,13 +205,6 @@ main {
   background-position: 50% 50%;
 }
 
-/*.demo {
-  list-style-image: url('/assets/images/icons8-cursor-in-window-30.png');
-}
-
-.code {
-  list-style-image: url('/assets/images/icons8-code-30.png');
-}*/
 .project-tools {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
@@ -228,7 +250,8 @@ main {
       flex-basis: 33.3%;
 }
 
-.web-scraper-image {
+.web-scraper-image,
+.online-shop-image {
   height: 0;
   padding-top: 75%;
 }
@@ -240,19 +263,13 @@ main {
       flex-basis: 100%;
 }
 
-/*.online-shop-image {
-  height: 0;
-  padding-top: 75%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
-}
-
 .online-shop-img-container {
   margin-top: 2vw;
   max-width: 100%;
-  flex-basis: 100%;
-}*/
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
 #barhops00 {
   background-image: url("/assets/images/barhops_demo_00.png");
 }
@@ -270,7 +287,7 @@ main {
 }
 
 #online-shop00 {
-  background-image: url("/assets/images/online-shop01.png");
+  background-image: url("/assets/images/online-shop00.png");
 }
 
 @media only screen and (max-width: 960px) {
@@ -286,10 +303,10 @@ main {
     max-width: none;
     height: auto;
     padding: 5vh 2vh 2vh 2vh;
-    text-align: center;
   }
   .header article {
     margin-bottom: 3vh;
+    text-align: center;
   }
   .header article h1 {
     font-size: 3.8rem;
@@ -323,7 +340,7 @@ main {
     margin-bottom: 30%;
   }
   .project .project-body .project-content {
-    height: 50%;
+    height: 70%;
     width: 70%;
     padding: 4%;
   }
@@ -374,6 +391,9 @@ main {
     padding: 2vw;
     margin-bottom: 2.5vw;
     border-radius: 2vw;
+  }
+  footer {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

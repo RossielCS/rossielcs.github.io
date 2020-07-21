@@ -290,6 +290,10 @@ main {
   background-image: url("/assets/images/online-shop00.png");
 }
 
+footer {
+  display: none;
+}
+
 @media only screen and (max-width: 960px) {
   .container {
     -webkit-box-orient: vertical;
@@ -391,9 +395,6 @@ main {
     padding: 2vw;
     margin-bottom: 2.5vw;
     border-radius: 2vw;
-  }
-  footer {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

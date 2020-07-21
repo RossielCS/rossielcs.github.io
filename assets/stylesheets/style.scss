@@ -1,0 +1,351 @@
+@import 'variables';
+
+body {
+  background-color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 360px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  color: $text-color;
+}
+
+.header {
+  position: fixed;
+  width: 30%;
+  max-width: 410px;
+  height: 100vh;
+  padding: 15.5vh 3vh 5vh 2.3vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text-color;
+  text-align: right;
+  background-color: $primary-color;
+  article {
+    h1 {
+      margin-bottom: 1.5vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.list-projects {
+  font-family: 'Comfortaa', cursive;
+  h3 {
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: 700;
+  }
+  li {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    .list-projects-mark {
+      position: absolute;
+      right: -1.5vh;
+    }
+  }
+}
+
+.contact {
+  font-family: 'Comfortaa', cursive;
+  
+  h4 {
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: 700;
+  }
+
+  .email {
+    margin-bottom: 3vh;
+    h5 {
+      margin-bottom: 0.8vh;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .elsewhere {
+    h5 {
+      margin-bottom: 0.8vh;
+      font-weight: 700;
+    }
+  }
+  
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 3vh;
+  margin-left: 29%;
+  display: grid;
+}
+
+.project {
+  height: 100vh;
+  padding-bottom: 5vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+  h2 {
+    grid-row: 1/2;
+    margin-bottom: 1vw;
+    font-size: clamp(4rem, 7vw, 6.5rem); 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: $primary-color-dark;
+  }
+  .project-body {
+    grid-row: 3/4;
+    position: relative;
+    .demo-code {
+      position: absolute;
+      right: 3vh;
+      top: 28%;
+      font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;      
+      li {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 3vh;        
+        a {
+          font-weight: 700;
+          color: $text-color;
+          vertical-align: super;
+        }
+      }
+    }
+    .project-content {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      padding: 2vh;
+      font-family: 'Open Sans', sans-serif;
+      background-color: $secondary-color;
+      p {
+        font-size: clamp(1rem, 1.4vw, 1.5rem);
+        line-height: 1.3em;
+      }
+    }
+    .project-image {
+      max-width: 75%;
+      padding-top: 10vh;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-basis: auto;
+      flex-shrink: 1;
+      div {
+        a {
+          div {            
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% 50%;
+          }
+        }
+      }
+    }    
+  }
+}
+
+.project-tools {
+  grid-row: 5/6;
+  margin: auto;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: $terciary-color;
+  li {
+    width: fit-content;
+    padding: 1vh;
+    border: 0.1em solid $terciary-color ;
+    border-radius: 1vh;
+    white-space: nowrap;
+  }
+}
+
+.tools-margin-right {
+  margin-right: 2vw;
+}
+
+.barhops-image {
+  height: 0;
+  padding-top: 210%;
+}
+
+.barhops-img-container {
+  max-width: 33.3%;
+  flex-basis: 33.3%;
+}
+
+.web-scraper-image,
+.online-shop-image {
+  height: 0;
+  padding-top: 75%;
+}
+
+.web-scraper-img-container {
+  margin-top: 2vw;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
+.online-shop-img-container {
+  margin-top: 2vw;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
+#barhops00 {
+  background-image: url('/assets/images/barhops_demo_00.png');
+}
+#barhops01 {
+  background-image: url('/assets/images/barhops_demo_01.png');
+}
+#barhops02 {
+  background-image: url('/assets/images/barhops_demo_02.png');
+}
+
+#web-scraper00 {
+  background-image: url('/assets/images/web_scraper_00.png');
+}
+
+#online-shop00 {
+  background-image: url('/assets/images/online-shop00.png');
+}
+
+@media only screen and (max-width: 960px){
+  .container {
+    flex-direction: column;
+  }
+
+  .header {
+    position: static;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    padding: 5vh 2vh 2vh 2vh;
+    
+    article {
+      margin-bottom: 3vh;
+      text-align: center;
+      h1 {
+        font-size: 3.8rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .list-projects {
+    display: none;
+  }
+
+  main {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin-left: 0;
+  }  
+
+  .project {
+    height: 100%;
+    padding-bottom: 25vw;
+    grid-template-rows: auto;
+    h2 {
+      margin-bottom: 8%;
+      font-size: clamp(2.7rem, 10vw, 6.5rem);
+    }
+    .project-body {
+      .demo-code {
+        right: 7vw;
+        font-size: clamp(1.2rem, 5vw, 3.6rem);
+        li {
+          margin-bottom: 30%;
+        }
+      }
+      .project-content {
+        height: 70%;
+        width: 70%;
+        padding: 4%;
+        p {
+          height: 30%;
+          font-size: clamp(0.7rem, 3.5vw, 2.7rem);
+          line-height: 1.3em;
+        }
+      }
+      .project-image {
+        max-width: 100%;
+        padding-top: 22vw;
+        flex-direction: column;        
+      }    
+    }
+  }
+
+  .barhops-img-container,
+  .web-scraper-img-container,
+  .online-shop-img-container {
+    max-width: 70%;
+    flex-basis: 70%;    
+  }
+
+  #barhops01,
+  #barhops02 {
+    display: none;
+  }
+
+  #web-scraper00{
+    margin-bottom: 10vw;
+  }
+
+  .project-tools {
+    margin: auto;
+    margin-top: 8vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 5vw;
+    color: $terciary-color;
+    li {
+      padding: 2vw;
+      margin-bottom: 2.5vw;
+      border-radius: 2vw;
+    }
+  }
+
+  footer {
+    display: none;
+  }
+}

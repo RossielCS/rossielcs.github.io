@@ -23,7 +23,7 @@ a {
   width: 30%;
   max-width: 410px;
   height: 100vh;
-  padding: 15.5vh 3vh 5vh 3vh;  
+  padding: 15.5vh 3vh 5vh 2.3vh;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,12 +35,12 @@ a {
       margin-bottom: 1.5vh;
       font-family: 'Comfortaa', cursive;
       font-weight: 700;
-      font-size: 3em;
+      font-size: 3rem;
     }
     p {
       font-family: 'Open Sans', sans-serif;
-      font-size: 1.2em;
-      line-height: 1.5em;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
       font-weight: 300;
     }
   }
@@ -49,13 +49,13 @@ a {
 .list-projects {
   font-family: 'Comfortaa', cursive;
   h3 {
-    font-size: 2.1em;
-    line-height: 2.1em;
+    font-size: 2rem;
+    line-height: 4rem;
     font-weight: 700;
   }
   li {
-    font-size: 1.5em;
-    line-height: 1.8em;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
     .list-projects-mark {
       position: absolute;
       right: -1.5vh;
@@ -75,12 +75,12 @@ main {
 }
 
 .project {
+  height: 100%;
   display: grid;
-  //padding-left: 3vh;
-  //grid-template-rows: 1fr 2fr;
+  grid-template-rows: auto 4fr 1fr;
   h2 {
-    height: 13vh;
-    font-size: 6vw;
+    margin-bottom: 1vw;
+    font-size: clamp(4rem, 7vw, 6.5rem); 
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     color: $primary-color-dark;
@@ -97,26 +97,26 @@ main {
       font-family: 'Open Sans', sans-serif;
       background-color: $secondary-color;
       p {
-        margin-bottom: 4.5vh;
-        font-size: 1.2em;
-        line-height: 1.5em;
+        font-size: clamp(1rem, 1.4vw, 1.5rem);
+        line-height: 1.3em;
       }
       ul {
-        margin-top: 4%;
+        margin-top: 25%;
         float: right;
-        font-size: 1.1em;
+        font-size: clamp(0.8rem, 1.2vw, 1.5rem);
         font-weight: 600;
-        list-style-image: url("/assets/images/icon-bullet-list.png");
+        list-style-image: url('/assets/images/icon-bullet-list.png');
         li {
           margin-bottom: 2vh;
           a {
+            font-weight: 700;
             color: $text-color;
           }
         }
       }
     }
     .project-image {
-      max-width: 80%;
+      max-width: 75%;
       padding-top: 10vh;
       margin: auto;
       display: flex;
@@ -128,7 +128,7 @@ main {
         flex-basis: 33.3%;
         div {
         height: 0;
-        padding-top: 200%;
+        padding-top: 210%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
@@ -148,21 +148,26 @@ main {
 }
 
 .project-tools {
-  margin: 4vh auto;
-  display: none;
+  margin: auto;
+  margin-top: 0;
+  display: flex;
   flex-wrap: nowrap;
-  //justify-content: space-around;
+  align-items: center;
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   color: $terciary-color;
   li {
     width: fit-content;
-    padding: 1vh;
+    padding: 1vh;    
     border: 0.1em solid $terciary-color ;
-    border-radius: 6px;
+    border-radius: 1vh;
     white-space: nowrap;
   }
+}
+
+.tools-margin-right {
+  margin-right: 2vw;
 }
 
 @media only screen and (max-width: 1200px){
@@ -186,13 +191,69 @@ main {
     }
   }
 
+  .list-projects {
+    display: none;
+  }
+
   main {
     padding-left: 3vh;
     padding-right: 3vh;
     margin-left: 0;
+  }  
+
+  .project {
+    h2 {
+      margin-bottom: 8%;
+      font-size: clamp(2.7rem, 10vw, 6.5rem);
+    }
+    .project-body {
+      .project-content {
+        height: 80vw;
+        width: 70%;
+        padding: 4%;
+        p {
+          height: 30%;
+          font-size: clamp(0.7rem, 3.5vw, 2.7rem);
+          line-height: 1.3em;
+        }
+        ul {
+          font-size: clamp(1.2rem, 5vw, 3.6rem);
+          li {
+            margin-bottom: 30%;
+          }
+        }
+      }
+      .project-image {
+        max-width: 100%;
+        padding-top: 22vw;
+        flex-direction: column;
+        .image-container {
+          max-width: 70%;
+          flex-basis: 70%;
+          #barhops01,
+          #barhops02 {
+            display: none;
+          }
+        }
+      }    
+    }
   }
 
-  .list-projects {
-    display: none;
+  .project-tools {
+    margin: auto;
+    margin-top: 8vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 5vw;
+    //font-size: clamp( , ,1.5rem);
+    color: $terciary-color;
+    li {
+      padding: 2vw;
+      margin-bottom: 2.5vw;
+      border-radius: 2vw;
+    }
   }
 }

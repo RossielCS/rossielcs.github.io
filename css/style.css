@@ -23,7 +23,7 @@ a {
   width: 30%;
   max-width: 410px;
   height: 100vh;
-  padding: 15.5vh 3vh 5vh 3vh;
+  padding: 15.5vh 3vh 5vh 2.3vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,13 +43,13 @@ a {
   margin-bottom: 1.5vh;
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .header article p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
   font-weight: 300;
 }
 
@@ -58,14 +58,14 @@ a {
 }
 
 .list-projects h3 {
-  font-size: 2.1em;
-  line-height: 2.1em;
+  font-size: 2rem;
+  line-height: 4rem;
   font-weight: 700;
 }
 
 .list-projects li {
-  font-size: 1.5em;
-  line-height: 1.8em;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
 }
 
 .list-projects li .list-projects-mark {
@@ -89,13 +89,16 @@ main {
 }
 
 .project {
+  height: 100%;
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto 4fr 1fr;
+      grid-template-rows: auto 4fr 1fr;
 }
 
 .project h2 {
-  height: 13vh;
-  font-size: 6vw;
+  margin-bottom: 1vw;
+  font-size: clamp(4rem, 7vw, 6.5rem);
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   color: #5D2AA5;
@@ -117,15 +120,14 @@ main {
 }
 
 .project .project-body .project-content p {
-  margin-bottom: 4.5vh;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  line-height: 1.3em;
 }
 
 .project .project-body .project-content ul {
-  margin-top: 4%;
+  margin-top: 25%;
   float: right;
-  font-size: 1.1em;
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
   font-weight: 600;
   list-style-image: url("/assets/images/icon-bullet-list.png");
 }
@@ -135,11 +137,12 @@ main {
 }
 
 .project .project-body .project-content ul li a {
+  font-weight: 700;
   color: #FFFFFF;
 }
 
 .project .project-body .project-image {
-  max-width: 80%;
+  max-width: 75%;
   padding-top: 10vh;
   margin: auto;
   display: -webkit-box;
@@ -162,7 +165,7 @@ main {
 
 .project .project-body .project-image .image-container div {
   height: 0;
-  padding-top: 200%;
+  padding-top: 210%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -181,13 +184,19 @@ main {
 }
 
 .project-tools {
-  margin: 4vh auto;
-  display: none;
+  margin: auto;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   color: #FF006E;
 }
 
@@ -197,8 +206,12 @@ main {
   width: fit-content;
   padding: 1vh;
   border: 0.1em solid #FF006E;
-  border-radius: 6px;
+  border-radius: 1vh;
   white-space: nowrap;
+}
+
+.tools-margin-right {
+  margin-right: 2vw;
 }
 
 @media only screen and (max-width: 960px) {
@@ -219,13 +232,71 @@ main {
   .header article {
     margin-bottom: 3vh;
   }
+  .list-projects {
+    display: none;
+  }
   main {
     padding-left: 3vh;
     padding-right: 3vh;
     margin-left: 0;
   }
-  .list-projects {
+  .project h2 {
+    margin-bottom: 8%;
+    font-size: clamp(2.7rem, 10vw, 6.5rem);
+  }
+  .project .project-body .project-content {
+    height: 80vw;
+    width: 70%;
+    padding: 4%;
+  }
+  .project .project-body .project-content p {
+    height: 30%;
+    font-size: clamp(0.7rem, 3.5vw, 2.7rem);
+    line-height: 1.3em;
+  }
+  .project .project-body .project-content ul {
+    font-size: clamp(1.2rem, 5vw, 3.6rem);
+  }
+  .project .project-body .project-content ul li {
+    margin-bottom: 30%;
+  }
+  .project .project-body .project-image {
+    max-width: 100%;
+    padding-top: 22vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project .project-body .project-image .image-container {
+    max-width: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  .project .project-body .project-image .image-container #barhops01,
+  .project .project-body .project-image .image-container #barhops02 {
     display: none;
+  }
+  .project-tools {
+    margin: auto;
+    margin-top: 8vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 5vw;
+    color: #FF006E;
+  }
+  .project-tools li {
+    padding: 2vw;
+    margin-bottom: 2.5vw;
+    border-radius: 2vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,7 +30,6 @@ a {
   color: $text-color;
   text-align: right;
   background-color: $primary-color;
-
   article {
     h1 {
       margin-bottom: 1.5vh;
@@ -55,9 +54,12 @@ a {
     font-weight: 700;
   }
   li {
-    //margin-bottom: 1.5vh;
     font-size: 1.5em;
     line-height: 1.8em;
+    .list-projects-mark {
+      position: absolute;
+      right: -1.5vh;
+    }
   }
 }
 
@@ -68,8 +70,103 @@ a {
 
 main {
   width: 100%;
-  padding: 3vh 0;
-  background-color: green;
+  padding: 3vh;
+  margin-left: 29%;
+}
+
+.project {
+  display: grid;
+  //padding-left: 3vh;
+  //grid-template-rows: 1fr 2fr;
+  h2 {
+    height: 13vh;
+    font-size: 6vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: $primary-color-dark;
+  }
+  .project-body {  
+    position: relative;  
+    .project-content {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      padding: 2vh;
+      font-family: 'Open Sans', sans-serif;
+      background-color: $secondary-color;
+      p {
+        margin-bottom: 4.5vh;
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+      ul {
+        margin-top: 4%;
+        float: right;
+        font-size: 1.1em;
+        font-weight: 600;
+        list-style-image: url("/assets/images/icon-bullet-list.png");
+        li {
+          margin-bottom: 2vh;
+          a {
+            color: $text-color;
+          }
+        }
+      }
+    }
+    .project-image {
+      max-width: 80%;
+      padding-top: 10vh;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-basis: auto;
+      flex-shrink: 1;
+      .image-container {
+        max-width: 33.3%;
+        flex-basis: 33.3%;
+        div {
+        height: 0;
+        padding-top: 200%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        }
+        #barhops00 {
+          background-image: url('/assets/images/barhops_demo_00.png');
+        }
+        #barhops01 {
+          background-image: url('/assets/images/barhops_demo_01.png');
+        }
+        #barhops02 {
+          background-image: url('/assets/images/barhops_demo_02.png');
+        }
+      }
+    }    
+  }
+}
+
+.project-tools {
+  margin: 4vh auto;
+  display: none;
+  flex-wrap: nowrap;
+  //justify-content: space-around;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: $terciary-color;
+  li {
+    width: fit-content;
+    padding: 1vh;
+    border: 0.1em solid $terciary-color ;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+
 }
 
 @media only screen and (max-width: 960px){
@@ -87,6 +184,12 @@ main {
     article {
       margin-bottom: 3vh;
     }
+  }
+
+  main {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin-left: 0;
   }
 
   .list-projects {

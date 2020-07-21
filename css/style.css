@@ -68,6 +68,11 @@ a {
   line-height: 1.8em;
 }
 
+.list-projects li .list-projects-mark {
+  position: absolute;
+  right: -1.5vh;
+}
+
 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,8 +84,121 @@ a {
 
 main {
   width: 100%;
-  padding: 3vh 0;
-  background-color: green;
+  padding: 3vh;
+  margin-left: 29%;
+}
+
+.project {
+  display: -ms-grid;
+  display: grid;
+}
+
+.project h2 {
+  height: 13vh;
+  font-size: 6vw;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #5D2AA5;
+}
+
+.project .project-body {
+  position: relative;
+}
+
+.project .project-body .project-content {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  padding: 2vh;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFBE0B;
+}
+
+.project .project-body .project-content p {
+  margin-bottom: 4.5vh;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.project .project-body .project-content ul {
+  margin-top: 4%;
+  float: right;
+  font-size: 1.1em;
+  font-weight: 600;
+  list-style-image: url("/assets/images/icon-bullet-list.png");
+}
+
+.project .project-body .project-content ul li {
+  margin-bottom: 2vh;
+}
+
+.project .project-body .project-content ul li a {
+  color: #FFFFFF;
+}
+
+.project .project-body .project-image {
+  max-width: 80%;
+  padding-top: 10vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.project .project-body .project-image .image-container {
+  max-width: 33.3%;
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+}
+
+.project .project-body .project-image .image-container div {
+  height: 0;
+  padding-top: 200%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.project .project-body .project-image .image-container #barhops00 {
+  background-image: url("/assets/images/barhops_demo_00.png");
+}
+
+.project .project-body .project-image .image-container #barhops01 {
+  background-image: url("/assets/images/barhops_demo_01.png");
+}
+
+.project .project-body .project-image .image-container #barhops02 {
+  background-image: url("/assets/images/barhops_demo_02.png");
+}
+
+.project-tools {
+  margin: 4vh auto;
+  display: none;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #FF006E;
+}
+
+.project-tools li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1vh;
+  border: 0.1em solid #FF006E;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 @media only screen and (max-width: 960px) {
@@ -100,6 +218,11 @@ main {
   }
   .header article {
     margin-bottom: 3vh;
+  }
+  main {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin-left: 0;
   }
   .list-projects {
     display: none;

@@ -12,8 +12,6 @@ a {
   min-width: 360px;
   height: 100vh;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #FFFFFF;
 }
@@ -24,16 +22,9 @@ a {
   max-width: 410px;
   height: 100vh;
   padding: 15.5vh 3vh 5vh 2.3vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   color: #FFFFFF;
   text-align: right;
   background-color: #8338EC;
@@ -102,12 +93,8 @@ a {
 }
 
 .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .mobile,
@@ -122,42 +109,30 @@ main {
   height: 100%;
   padding: 3vh;
   margin-left: 29%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh 100vh 100vh;
-      grid-template-rows: 100vh 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh;
 }
 
 main #barhops-project {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
 
 main #web-scraper-projec {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
   grid-row: 2/3;
 }
 
 main #online-shop-project {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
 .project {
   height: 100vh;
   padding-bottom: 5vw;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 3fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
 }
 
 .project h2 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
   margin-bottom: 1vw;
   font-size: clamp(4rem, 7vw, 6.5rem);
@@ -170,8 +145,6 @@ main #online-shop-project {
 }
 
 .project .project-body {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
   grid-row: 3/4;
   position: relative;
 }
@@ -180,16 +153,10 @@ main #online-shop-project {
   max-width: 75%;
   padding-top: 10vh;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  justify-content: center;
+  flex-basis: auto;
+  flex-shrink: 1;
 }
 
 .project .project-body .project-image div a div {
@@ -237,19 +204,12 @@ main #online-shop-project {
 }
 
 .project-tools {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
   grid-row: 5/6;
   margin: auto;
   margin-top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: nowrap;
+  align-items: center;
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
   font-size: 1.5vw;
@@ -257,8 +217,6 @@ main #online-shop-project {
 }
 
 .project-tools li {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 1vh;
   border: 0.1em solid #FF006E;
@@ -277,8 +235,7 @@ main #online-shop-project {
 
 .barhops-img-container {
   max-width: 33.3%;
-  -ms-flex-preferred-size: 33.3%;
-      flex-basis: 33.3%;
+  flex-basis: 33.3%;
 }
 
 .web-scraper-image,
@@ -290,15 +247,13 @@ main #online-shop-project {
 .web-scraper-img-container {
   margin-top: 2vw;
   max-width: 100%;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .online-shop-img-container {
   margin-top: 2vw;
   max-width: 100%;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 #barhops00 {
@@ -323,14 +278,10 @@ main #online-shop-project {
 
 @media only screen and (max-width: 960px) {
   .container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
   }
   .header {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
     position: static;
     width: 100%;
@@ -366,26 +317,18 @@ main #online-shop-project {
     left: 0 !important;
   }
   main {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
     padding-left: 3vh;
     padding-right: 3vh;
     margin-left: 0;
   }
   main #barhops-project-mobile {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
   }
   main #web-scraper-project-mobile {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
   main #online-shop-project-mobile {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
   .desktop {
@@ -395,16 +338,13 @@ main #online-shop-project {
   }
   .project {
     max-height: 100vh;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-template-rows: auto;
   }
   .project h2 {
     margin-bottom: 0;
     font-size: clamp(2.7rem, 10vw, 6.5rem);
   }
   .project .project-content {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
     position: static;
     height: 200%;
@@ -418,8 +358,6 @@ main #online-shop-project {
     line-height: 1.3em;
   }
   .project .project-body {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
   .project .project-body .project-image {
@@ -427,18 +365,11 @@ main #online-shop-project {
     padding-top: 0;
   }
   .project .project-tools {
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
     grid-row: 4/5;
     margin: 2vh auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
     font-size: 5vw;
@@ -449,18 +380,12 @@ main #online-shop-project {
     font-size: 4vw;
   }
   .project .demo-code {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
     grid-row: 5/6;
     position: static;
     right: 0;
     top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     font-size: clamp(1.2rem, 5vw, 3.6rem);
     text-align: center;
   }
@@ -478,23 +403,18 @@ main #online-shop-project {
   .web-scraper-img-container,
   .online-shop-img-container {
     max-width: 70%;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+    flex-basis: 70%;
   }
   footer {
     visibility: visible;
   }
   footer {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
     padding: 3vh;
     background-color: #8338EC;
   }
   footer .icons {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
 /*# sourceMappingURL=style.css.map */
